@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  tabpy:
+    image: "tfoldi/k8s-tabpy"
+    expose:
+      - "9004"
+
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - tabpy
+    ports:
+      - "5000:5000"
