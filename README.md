@@ -13,6 +13,13 @@ How to configure: https://help.tableau.com/current/pro/desktop/en-us/r_connectio
 
 ![Config window](https://help.tableau.com/current/pro/desktop/en-us/Img/ext_serv_1.png)
 
+## Run tabpy cluster via docker-compose
+
+To run multiple instances of tabpy with nginx as load balancer run:
+
+    docker-compose up --scale tabpy=3 -d
+  
+
 ## Why this image?
 
 Designed for kubernetes, this tabpy/docker runs preinitalized with the demo goodies. To keep things secure, it is running as 
