@@ -3,10 +3,10 @@ EDITOR=vim
 all: build
 
 build:
-	docker build -t tfoldi/k8s-tabpy:release .
+	docker build -t golliaph/k8s-tabpy:release .
 
 run: build
-	docker run -ti -p 9004 tfoldi/k8s-tabpy:release
+	docker run -ti -p 9004 golliaph/k8s-tabpy:release
 
 
 clean:
