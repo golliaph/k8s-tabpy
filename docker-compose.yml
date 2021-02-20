@@ -13,4 +13,4 @@ services:
     depends_on:
       - tabpy
     ports:
-      - "5000:5000"
+      - "9004:9004"
